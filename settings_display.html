@@ -1,0 +1,29 @@
+<!-- 文件: public/extensions/third-party/day1/settings_display.html -->
+<div class="inline-drawer">
+    <div class="inline-drawer-toggle inline-drawer-header">
+        <b>每日聊天统计 (Day1)</b>
+        <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+    </div>
+    <div class="inline-drawer-content" style="padding: 10px;">
+        <p>记录您每天与不同角色/群组的互动情况。</p>
+        <button id="day1-refresh-button" class="menu_button"><i class="fa-solid fa-arrows-rotate"></i> 刷新统计</button>
+        <div id="day1-stats-container" style="margin-top: 15px; max-height: 400px; overflow-y: auto;">
+            <table id="day1-stats-table" class="stats-table">
+                <thead>
+                    <tr>
+                        <th>角色/群组</th>
+                        <th>用户消息 (Tokens)</th>
+                        <th>AI 消息 (Tokens)</th>
+                        <!-- 修改表头含义 -->
+                        <th>今日累计 Prompt Tokens</th>
+                        <th>日期</th>
+                    </tr>
+                </thead>
+                <tbody id="day1-stats-table-body">
+                    <tr><td colspan="5"><i>加载中...</i></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <small style="margin-top: 5px; display: block; color: var(--text-color-secondary);"><i>注：Prompt Tokens 指每次发送给 AI 的完整上下文的总 Token 数累加值。</i></small>
+    </div>
+</div>
