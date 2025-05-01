@@ -1,0 +1,33 @@
+/* 可选：为统计表格添加一些样式 */
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.stats-table th,
+.stats-table td {
+    border: 1px solid var(--typical-background-color__border); /* 使用 ST 变量 */
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.stats-table th {
+    background-color: var(--typical-background-color__light); /* 使用 ST 变量 */
+    font-weight: bold;
+}
+
+.stats-table tbody tr:nth-child(even) {
+    background-color: var(--typical-background-color__secondary); /* 使用 ST 变量 */
+}
+
+.stats-table td i {
+    color: var(--text-color-secondary); /* 使用 ST 变量 */
+}
+
+#day1-stats-container {
+    background-color: var(--typical-background-color); /* 使用 ST 变量 */
+    border: 1px solid var(--typical-background-color__border); /* 使用 ST 变量 */
+    border-radius: 5px;
+}
