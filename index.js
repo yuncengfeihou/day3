@@ -1,10 +1,7 @@
 // 文件: public/extensions/third-party/day3/index.js
 
 import { extension_settings, loadExtensionSettings, getContext, renderExtensionTemplateAsync } from '../../../extensions.js';
-// 注意：确保下面这行的路径对于你的 SillyTavern 版本是正确的
-// 如果 script.js 在根目录，通常是 '../../../../script.js'
-// 如果 script.js 在 /src/ 目录，可能是 '../../../../src/script.js'
-import { saveSettingsDebounced, eventSource, event_types, mainApi, power_user } from '../../../../script.js';
+import { saveSettingsDebounced, eventSource, event_types, mainApi, power_user } from '../../../script.js';
 // 注意： getTokenCountAsync 通常在 tokenizers.js 中
 import { getTokenCountAsync } from '../../../tokenizers.js'; // 确保路径正确
 
