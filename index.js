@@ -1,4 +1,4 @@
-// 文件: public/extensions/third-party/day2/index.js
+// 文件: public/extensions/third-party/day3/index.js
 
 import { extension_settings, loadExtensionSettings, getContext, renderExtensionTemplateAsync } from '../../../extensions.js';
 // 注意：确保下面这行的路径对于你的 SillyTavern 版本是正确的
@@ -11,8 +11,8 @@ import { getTokenCountAsync } from '../../../../tokenizers.js'; // 确保路径�
 
 (function () {
     // --- 插件基础信息 ---
-    const extensionName = "day2";
-    const pluginFolderName = "day2"; // 与你的文件夹名称匹配
+    const extensionName = "day3";
+    const pluginFolderName = "day3"; // 与你的文件夹名称匹配
     const extensionFolderPath = `scripts/extensions/third-party/${pluginFolderName}`;
     const extensionSettings = extension_settings[extensionName] || {};
     const defaultSettings = {};
@@ -247,12 +247,12 @@ import { getTokenCountAsync } from '../../../../tokenizers.js'; // 确保路径�
         } catch (error) {
             console.error(`[${extensionName}] Main: Critical - Failed initial DB open/setup:`, error);
             // 可以考虑添加一个用户可见的错误提示
-            // alert("Day2 插件数据库初始化失败，统计功能可能无法正常工作。请检查浏览器控制台获取详细信息。");
+            // alert("day3 插件数据库初始化失败，统计功能可能无法正常工作。请检查浏览器控制台获取详细信息。");
         }
 
         // 注入设置 UI
         try {
-            // 确保你的模板文件名是 'settings_display.html' 并且在 'public/extensions/third-party/day2/' 目录下
+            // 确保你的模板文件名是 'settings_display.html' 并且在 'public/extensions/third-party/day3/' 目录下
             const settingsHtml = await renderExtensionTemplateAsync(`third-party/${pluginFolderName}`, 'settings_display');
             // 尝试找到更可靠的注入目标
             const targetContainer = $('#extensions_settings') || $('#extension_settings') || $('body'); // 备用方案
@@ -272,7 +272,7 @@ import { getTokenCountAsync } from '../../../../tokenizers.js'; // 确保路径�
 
         // 初始化 Web Worker
         try {
-            // 确保 worker.js 文件在 'public/extensions/third-party/day2/worker.js'
+            // 确保 worker.js 文件在 'public/extensions/third-party/day3/worker.js'
             const workerPath = `${extensionFolderPath}/worker.js`; // 使用变量构建路径
             day1Worker = new Worker(workerPath);
             day1Worker.onmessage = (event) => { /* console.log(`[${extensionName}] Main: Received message from worker:`, event.data); */ }; // 可以根据需要取消注释
