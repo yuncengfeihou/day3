@@ -1,0 +1,11 @@
+{
+    "display_name": "dayC1.0",
+    "loading_order": 4,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "Your Name",
+    "version": "1.0.0",
+    "homePage": ""
+}
