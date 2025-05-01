@@ -1,9 +1,8 @@
 // 文件: public/extensions/third-party/day3/index.js
 
 import { extension_settings, loadExtensionSettings, getContext, renderExtensionTemplateAsync } from '../../../extensions.js';
-import { saveSettingsDebounced, eventSource, event_types, mainApi, power_user } from '../../../script.js';
-// 注意： getTokenCountAsync 通常在 tokenizers.js 中
-import { getTokenCountAsync } from '../../../tokenizers.js'; // 确保路径正确
+import { saveSettingsDebounced, eventSource, event_types } from '../../../../script.js';
+import { getTokenCountAsync } from '../../../tokenizers.js';
 
 
 (function () {
